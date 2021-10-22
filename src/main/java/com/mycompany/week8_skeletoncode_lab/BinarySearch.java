@@ -11,23 +11,25 @@ package com.mycompany.week8_skeletoncode_lab;
 public class BinarySearch {
 
     public static int runBinarySearchIteratively(
-            int[] sortedArray, int key, int low, int high) {
-        int index = Integer.MAX_VALUE;
+            int[] sortedArray, int key, int low, int high) { 
+        int index = Integer.MAX_VALUE;// 1
 
-        while (low <= high) {
-            int mid = low + ((high - low) / 2);
-            if (sortedArray[mid] < key) {
-                low = mid + 1;
-            } else if (sortedArray[mid] > key) {
-                high = mid - 1;
-            } else if (sortedArray[mid] == key) {
-                index = mid;
-                break;
+        while (low <= high) {// n
+            int mid = low + ((high - low) / 2);//1
+            if (sortedArray[mid] < key) {//n
+                low = mid + 1;//1
+            } else if (sortedArray[mid] > key) {//n
+                high = mid - 1;//1
+            } else if (sortedArray[mid] == key) {//n
+                index = mid;//1
+                break;//1
             }
         }
-        return index;
+        return index;//1
     }
     //ToDo 2: Call the above method and test the algorithm  
     // provide time and space analysis 
-
+    //time complexity: O(log n)
+    //space Complexity: O(n)
+   
 }
